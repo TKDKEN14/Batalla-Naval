@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="534.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.TableroControllerView">
+   <children>
+      <Label layoutX="78.0" layoutY="14.0" text="Tus Barcos" />
+      
+      <Label fx:id="barcosJugadorRestantes" 
+      layoutX="378.0" layoutY="440.0" text="12"/>
+
+      <Label fx:id="barcosEnemigoRestantes"
+      layoutX="710.0" layoutY="440.0" text="12"/>
+      
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="200.0" layoutX="14.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+
+      <Rectangle fx:id="PortAvion" arcHeight="5.0" arcWidth="5.0" fill="#2c4380" height="120.0" layoutX="27.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+      <Rectangle fx:id="Acorazado" arcHeight="5.0" arcWidth="5.0" fill="#258010" height="90.0" layoutX="62.0" layoutY="51.0" stroke="BLACK" strokeType="INSIDE" width="31.0" />
+      <Rectangle fx:id="Destructor" arcHeight="5.0" arcWidth="5.0" fill="#214322" height="70.0" layoutX="99.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+      <Rectangle fx:id="Fragata" arcHeight="5.0" arcWidth="5.0" fill="#64691e" height="50.0" layoutX="138.0" layoutY="71.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+      <Rectangle fx:id="Submarino" arcHeight="5.0" arcWidth="5.0" fill="#17125a" height="25.0" layoutX="177.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+     
+      
+      <Label fx:id="labelPortaavion" layoutX="34.0" layoutY="163.0" />
+      <Label fx:id="labelAcorazado" layoutX="70.0" layoutY="148.0"/>
+      <Label fx:id="labelDestructor" layoutX="106.0" layoutY="140.0" />
+      <Label fx:id="labelFragata" layoutX="145.0" layoutY="132.0" />
+      <Label fx:id="labelSubmarino" layoutX="184.0" layoutY="113.0" />
+      
+      <GridPane fx:id="gridJugador" layoutX="248.0" layoutY="129.0" prefHeight="300.0" prefWidth="300.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+
+      <Button fx:id="BotonAtacar" layoutX="79.0" layoutY="407.0" mnemonicParsing="false" onAction="#onAtacarButtonClick" prefHeight="40.0" prefWidth="71.0" text="Atacar" />
+      <Button fx:id="Abandonar" layoutX="48.0" layoutY="463.0" mnemonicParsing="false" onAction="#onAbandonarButtonClick" prefHeight="40.0" prefWidth="134.0" text="Abandonar Batalla" />
+     
+      <Label fx:id="" layoutX="368.0" layoutY="101.0" text="Tu Zona" />
+
+      <GridPane fx:id="gridEnemigo" layoutX="589.0" layoutY="129.0" prefHeight="300.0" prefWidth="300.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+
+   </children>
+</AnchorPane>
